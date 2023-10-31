@@ -1,3 +1,11 @@
+def decode(new_password):
+    old_password = ''
+
+    for value in new_password:
+        old_password = old_password + str((int(value) - 3) % 10)
+
+    return old_password
+
 def encoder(password):
     int_password = int(password)
     encoded_password = ""
